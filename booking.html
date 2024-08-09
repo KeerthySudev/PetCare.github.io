@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="styles-book.css" rel="stylesheet">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        .booking-section {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            background-image: url("images/bg4.jpg.crdownload");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .booking-form, .services-list {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .booking-form {
+            background-color: rgba(255, 255, 255, 0.144); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .booking-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .booking-form .input-group {
+            margin-bottom: 15px;
+        }
+
+        .booking-form .input, .booking-form .select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .booking-form .text-danger {
+            font-size: 14px;
+            color: rgb(93, 4, 4);
+            margin-top: 5px;
+            min-height: 20px;
+        }
+
+        .booking-form .btn-submit {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .booking-form .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .booking-form .success-message {
+            background-color: #67e183;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .services-list {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.services-list h2 {
+    margin-bottom: 20px;
+}
+
+.services-list p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.services-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list ul li {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-list ul li i {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+        @media (max-width: 768px) {
+            .booking-form, .services-list {
+                flex: 1 1 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container-header">
+        <nav class="navbar">
+            <a href="" class="logo">
+                <h1 class="second-name"><span class="first-name">Pet</span>Care</h1>
+            </a>
+            <span class="menu-toggle">&#9776;</span>
+                <div class="links">
+                    <a href="index.html" class="link">Home</a>
+                    <a href="services.html" class="link">Services</a>
+                    <a href="plans.html" class="link">Plans</a>
+                    <a href="booking.html" class="link">Booking</a>
+                    <a href="about.html" class="link">About us</a>
+                    <a href="contact.html" class="link">Contact</a>
+                    </div>          
+        </nav>
+    </div>
+</header>
+<section class="booking-section">
+    <div class="booking-form">
+        <h2>Book a Service</h2>
+        <form id="bookingForm">
+            <div class="input-group">
+                <input type="text" class="input" id="name" placeholder="Your Name" required>
+                <p class="validation text-danger"></p>
+            </div>
+            <div class="input-group">
+                <input type="email" class="input" id="email" placeholder="Your E-mail" required>
+                <p class="validation text-danger"></p>
+            </div>
+            <div class="input-group">
+                <input type="date" class="input" id="bookingDate" required>
+                <p class="validation text-danger"></p>
+            </div>
+            <div class="input-group">
+                <input type="time" class="input" id="bookingTime" required>
+                <p class="validation text-danger"></p>
+            </div>
+            <div class="input-group">
+                <select class="select" id="service" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="pet-boarding">Pet Boarding</option>
+                    <option value="grooming">Grooming</option>
+                    <option value="feeding">Feeding</option>
+                    <option value="training">Training</option>
+                </select>
+                <p class="validation text-danger"></p>
+            </div>
+            <button class="btn-submit" type="submit">Submit</button>
+            <div class="success-message" style="display: none;">Booking successfully submitted!</div>
+        </form>
+    </div>
+    <div class="services-list">
+        <h2>Our Services</h2>
+        <p>Going for a vacation? We will take care of your dogs!</p>
+        <ul>
+            <li><i class="fas fa-paw"></i> Pet Boarding</li>
+            <li><i class="fas fa-cut"></i> Grooming</li>
+            <li><i class="fas fa-bone"></i> Feeding</li>
+            <li><i class="fas fa-dog"></i> Training</li>
+        </ul>
+    </div>
+</section>
+<footer>
+<div class="container-footer">
+    <div class="row-footer">
+        <div class="col1-footer">
+            <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Care</h1>
+            <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+            <p class="m-0 text-white">
+                &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
+            </p>
+        </div>
+        <div class="col2-footer">
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-primary mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <div class="icons">
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+</footer>
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var form = event.target;
+        var successMessage = form.querySelector('.success-message');
+        successMessage.style.display = 'block';
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 3000);
+        form.reset();
+    });
+</script>
+</body>
+</html>

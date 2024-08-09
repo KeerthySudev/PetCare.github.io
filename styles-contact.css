@@ -1,2 +1,115 @@
+section {
+    background-image: url('images/cont2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px); 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 
-  
+.row-form {
+    /* background-image: url('images/cont2.jpg'); */
+    background-color: rgba(255, 255, 255, 0.144); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.image {
+    display: none; /* Hide image section */
+}
+
+.col-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.text-danger {
+    font-size: 16px;
+    color: rgb(93, 4, 4);
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.btn-message {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-message:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    background-color: #67e183;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+.row-form {
+padding: 10px;
+max-width: 90%;
+}
+
+.input {
+font-size: 14px;
+padding: 8px;
+}
+
+.btn-message {
+font-size: 14px;
+padding: 8px 16px;
+}
+
+.success-message {
+font-size: 14px;
+padding: 8px;
+}
+}
+
+@media (max-width: 480px) {
+.row-form {
+padding: 5px;
+max-width: 90%;
+}
+
+.input {
+font-size: 12px;
+padding: 6px;
+}
+
+.btn-message {
+font-size: 12px;
+padding: 6px 12px;
+}
+
+.success-message {
+font-size: 12px;
+padding: 6px;
+}
+}
