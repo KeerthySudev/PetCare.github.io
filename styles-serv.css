@@ -1,10 +1,11 @@
 
-        .services-section {
-            padding: 40px 20px;
-            background-image: url("images/bg2.jpg");
+               
+                .services-section {
+            background-image: url("images/bg6.jpg");
             background-size: cover;
             background-position: center;
             text-align: center;
+            padding: 160px 20px 40px;
         }
 
         .services-section h2 {

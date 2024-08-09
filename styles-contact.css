@@ -2,7 +2,7 @@ section {
     background-image: url('images/cont2.jpg'); 
     background-size: cover;
     background-position: center;
-    padding: 40px 20px;
+    padding: 160px 20px 40px;
     min-height: calc(100vh - 200px); 
     display: flex;
     align-items: center;

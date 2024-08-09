@@ -1,5 +1,5 @@
 section {
-    padding: 40px 20px;
+    padding: 160px 20px 40px;
     min-height: calc(100vh - 200px); /* Adjust this value based on the height of your header and footer */
     display: flex;
     align-items: center;

@@ -6,301 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="styles.css" rel="stylesheet">
+    <link href="styles-serv.css" rel="stylesheet">
     <link href="img/favicon.ico" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+
+               
+.services-section {
+            background-image: url("images/gbg.jpg");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 160px 20px 40px;
+        }
+
+        .services-section h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .services-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .service-card {
+    background-color: rgba(255, 255, 255, 0.144); 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    text-align: left;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Start position off-screen */
+    animation: slide-in 0.8s forwards; /* Slide-in animation */
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+    position: relative; /* Needed for positioning the details */
+}
+
+.service-card img {
+    width: 100%; /* Ensures the image covers the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.service-details {
+    opacity: 0;
+    transform: translateY(20px); /* Move details down */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.service-card:hover .service-details {
+    opacity: 1; /* Make details visible on hover */
+    transform: translateY(0); /* Move details to original position */
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide-in to normal position */
+    }
+}
+
+
+        .service-card h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-card {
+                width: 90%;
+            }
+        }
+
+
+    </style>
 </head>
-<style>
-    /* General reset */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
- 
-  /* header */
-  header {
-    background-color: transparent;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .container-header {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar .menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .first-name {
-    color: #007bff;
-  }
-  
-  .links {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center the links horizontally */
-  }
-  
-  .link {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #666;
-    transition: color 0.2s ease;
-  }
-  .links .link {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #666;
-    transition: color 0.2s ease;
-  }
-  
-  .links .link:hover {
-    color: #333;
-  }
-  
-  .link:hover {
-    color: #333;
-  }
-  
-  .link-active {
-    color: #007bff;
-  }
-  
-  .second-name {
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .links {
-      flex-direction: row; /* Ensure links are horizontal on smaller screens */
-      justify-content: flex-start; /* Align links to the start */
-      flex-wrap: wrap; /* Allow wrapping */
-      width: 100%; /* Full width */
-    }
-    .link {
-      margin-left: 0;
-      margin-right: 10px; /* Space between links */
-      margin-bottom: 10px;
-    }
-    .logo {
-      font-size: 20px; /* Reduce logo size */
-    }
-    .link {
-      font-size: 16px; /* Reduce link size */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 18px; /* Further reduce logo size */
-    }
-    .link {
-      font-size: 14px; /* Further reduce link size */
-    }
-    /* .links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #f9f9f9;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        border-top: 1px solid #ccc;
-      }
-    
-      .links .link {
-        margin: 10px 0;
-        padding: 10px 20px;
-        width: 100%;
-      }
-    
-      .navbar .menu-toggle {
-        margin-right: 0;
-        display: block;
-      } */
-  }
-  
-  /* header */
-  
-  /* main */
-  .texts {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 80%;
-    color: white;
-  }
-  
-  .background-image {
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('images/wp1.jpeg');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    position: relative;
-    padding-bottom: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .texts {
-      font-size: 20px; /* Reduce text size */
-    }
-    .background-image {
-      height: 300px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .texts {
-      font-size: 10px; /* Further reduce text size */
-    }
-    .background-image {
-      height: 400px;
-      
-    }
-  }
-  
-  header, main, footer {
-    width: 100%;
-  }
-  
-  a:hover {
-    color: #333;
-  }
-  
-  /* main */
-  
-  /* footer */
-  .container-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .row-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .col1-footer, .col2-footer {
-    flex-basis: 45%;
-  }
-  
-  .col1-footer h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .col1-footer p {
-    font-size: 16px;
-    color: #ccc;
-  }
-  
-  .col2-footer h5 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .col2-footer p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .col2-footer i {
-    margin-right: 10px;
-  }
-  
-  .col2-footer .btn {
-    margin-right: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .row-footer {
-      flex-direction: column;
-    }
-    .col1-footer, .col2-footer {
-      flex-basis: 100%;
-    }
-    .col1-footer h1 {
-      font-size: 20px; /* Reduce footer heading size */
-    }
-    .col1-footer p,
-    .col2-footer p,
-    .col2-footer h5 {
-      font-size: 14px; /* Reduce footer text size */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .col1-footer h1 {
-      font-size: 15px; /* Further reduce footer heading size */
-    }
-    .col1-footer p,
-    .col2-footer p,
-    .col2-footer h5 {
-      font-size: 8px; /* Further reduce footer text size */
-    }
-    .icons {
-        font-size: 9px; /* Further reduce footer heading size */
-      }
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  footer {
-    width: 100%;
-    position: relative;
-  }
-  
-  /* footer */
-  
-</style>
 <body>
-    
-<header>
+    <header>
     <div class="container-header">
         <nav class="navbar">
             <a href="" class="logo">
@@ -318,27 +121,59 @@
         </nav>
     </div>
 </header>
-<main>
-    <div class="background-image">
-
-    </div>
-    <div class="main-content">
-        <div class="texts">
-            <h3 class="text-h1">Best Pet Services</h3>
-            <h1 class="text-h2">Pet Spa & Grooming</h1>
-            <h5 class="text-h3">Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat</h5>
-            <a href="" class="more-btn">Learn More</a>
+<section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-row">
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>
+            
         </div>
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>        </div>
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>        </div>
+        
     </div>
-</main>
+    <div class="services-row">
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>        </div>
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>        </div>
+        <div class="service-card">
+            <img src="images/cont1.jpg" alt="Service Image">
+            <h3>Service</h3>
+            <div class="service-details">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel malesuada tortor.</p>
+            </div>
+                </div>
     </div>
-    
+</section>
 <footer>
 <div class="container-footer">
     <div class="row-footer">
         <div class="col1-footer">
             <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Care</h1>
-            <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+            <p class="m-0">Passionate animal lovers dedicated to provide top-notch services for your furry friends. From grooming and training to walking and sitting, we offer a range of personalized solutions to meet your pet's unique needs.</p><br>
             <p class="m-0 text-white">
                 &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
             </p>
@@ -347,14 +182,14 @@
             <div class="row">
                 <div class="col">
                     <h5 class="text-primary mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Pattathil Building, Vazhakkala, Kerala</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+91 88765908759</p>
+                    <p><i class="fa fa-envelope mr-2"></i>petcare@gmail.com</p>
                     <div class="icons">
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.facebook.com/login"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
