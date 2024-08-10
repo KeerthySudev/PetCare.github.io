@@ -148,10 +148,10 @@
   
   @media (max-width: 480px) {
     .texts {
-      font-size: 10px; /* Further reduce text size */
+      font-size: 24px; /* Further reduce text size */
     }
     .background-image {
-      height: 450px;
+      height: 639px;
     }
   }
   
