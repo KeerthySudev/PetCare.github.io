@@ -39,7 +39,7 @@
 
         .service-card img {
             max-width: 100%;
-            height: 72%;
+            height: auto;
             border-radius: 5px;
         }
 
