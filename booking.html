@@ -10,126 +10,7 @@
     <link href="img/favicon.ico" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <style>
-        
-
-        .booking-section {
-            padding: 160px 20px 40px;
-            display: flex;
-            flex-wrap: wrap;
-            background-image: url("images/gbg.jpg");
-            background-size: cover;
-            background-position: center;
-            justify-content: center;
-        }
-
-        .booking-form, .services-list {
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-            max-width: 500px;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.144);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
-
-        .booking-form h2, .services-list h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #007bff;
-            text-align: center;
-        }
-
-        .booking-form .input-group {
-            margin-bottom: 15px;
-        }
-
-        .booking-form .input, .booking-form .select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .booking-form .text-danger {
-            font-size: 14px;
-            color: #d9534f;
-            margin-top: 5px;
-            min-height: 20px;
-        }
-
-        .booking-form .btn-submit {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-        }
-
-        .booking-form .btn-submit:hover {
-            background-color: #0056b3;
-        }
-
-        .booking-form .success-message {
-            background-color: #67e183;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .services-list {
-            text-align: center;
-        }
-
-        .services-list p {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .services-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services-list ul li {
-            font-size: 1.2em;
-            color: #007bff;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .services-list ul li:hover {
-            background-color: #e2e6ea;
-        }
-
-        .services-list ul li i {
-            font-size: 1.5em;
-            color: #007bff;
-            margin-right: 10px;
-        }
-
-        @media (max-width: 768px) {
-
-            .booking-form, .services-list {
-                flex: 1 1 100%;
-                margin-right: 0;
-            }
-        }
+   
     </style>
 </head>
 <body>
@@ -151,28 +32,30 @@
             </nav>
         </div>
     </header>
+    
     <section class="booking-section">
+        
         <div class="booking-form">
-            <h2>Book a Service</h2>
+            <h1>Book a Service</h1>
             <form id="bookingForm">
                 <div class="input-group">
-                    <input type="text" class="input" id="name" placeholder="Your Name" required>
+                    <input type="text" class="input" id="name" placeholder="Your Name">
                     <p class="validation text-danger"></p>
                 </div>
                 <div class="input-group">
-                    <input type="email" class="input" id="email" placeholder="Your E-mail" required>
+                    <input type="email" class="input" id="email" placeholder="Your E-mail">
                     <p class="validation text-danger"></p>
                 </div>
                 <div class="input-group">
-                    <input type="date" class="input" id="bookingDate" required>
+                    <input type="date" class="input" id="bookingDate">
                     <p class="validation text-danger"></p>
                 </div>
                 <div class="input-group">
-                    <input type="time" class="input" id="bookingTime" required>
+                    <input type="time" class="input" id="bookingTime">
                     <p class="validation text-danger"></p>
                 </div>
                 <div class="input-group">
-                    <select class="select" id="service" required>
+                    <select class="select" id="service">
                         <option value="" disabled selected>Select Service</option>
                         <option value="pet-boarding">Pet Boarding</option>
                         <option value="grooming">Grooming</option>
@@ -186,7 +69,6 @@
             </form>
         </div>
         <div class="services-list">
-            <h2>Our Services</h2>
             <p>Whether you're going on vacation or need daily care, we offer top-notch services for your pets.</p>
             <ul>
                 <li><i class="fas fa-paw"></i> Pet Boarding - A safe and comfortable place for your pets while you're away.</li>
