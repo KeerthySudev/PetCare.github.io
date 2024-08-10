@@ -1,10 +1,10 @@
 section {
-    padding: 160px 20px 40px;
+    padding: 356px 17px 256px;
     min-height: calc(100vh - 200px); /* Adjust this value based on the height of your header and footer */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("images/gbg.jpg");
+    /* background-image: url("images/gbg.jpg"); */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -104,9 +104,9 @@ section {
     height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     section {
-        padding: 20px 10px;
+        padding: 120px 8px 10px;
         min-height: auto; /* Adjust this value based on the height of your header and footer */
     }
 
