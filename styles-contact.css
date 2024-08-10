@@ -1,8 +1,9 @@
 section {
-    background-image: url('images/cont2.webp');
+    /* background-image: url('images/cont2.webp'); */
+    background-color:#ccc;
     background-size: cover;
     background-position: center;
-    padding: 356px 17px 256px;
+    padding: 377px 9px 308px;
     min-height: calc(100vh - 200px); 
     display: flex;
     align-items: center;

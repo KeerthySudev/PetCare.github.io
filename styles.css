@@ -68,7 +68,9 @@
   
   
   .link-active {
-    color: #007bff;
+    color: #00ffd0;
+    text-indent: 20px;
+    font-weight:bolder;
   }
   
   .second-name {
