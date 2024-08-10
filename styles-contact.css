@@ -1,8 +1,8 @@
 section {
-    background-image: url('images/cont2.jpg'); 
+    background-image: url('images/cont2.webp');
     background-size: cover;
     background-position: center;
-    padding: 160px 20px 40px;
+    padding: 356px 17px 256px;
     min-height: calc(100vh - 200px); 
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@ section {
 }
 
 .row-form {
-    /* background-image: url('images/cont2.jpg'); */
+    
     background-color: rgba(255, 255, 255, 0.144); 
     padding: 20px;
     border-radius: 10px;
