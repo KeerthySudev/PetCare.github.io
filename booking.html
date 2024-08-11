@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <script src="book.js"></script>
     <style>
-   
+
     </style>
 </head>
 <body>
@@ -35,9 +35,8 @@
     </header>
     
     <section class="booking-section">
-        
         <div class="booking-form">
-            <h1>Book a Service</h1>
+            <h1>BOOK A SERVICE</h1>
             <form id="bookingForm">
                 <div class="input-group">
                     <input type="text" class="input" id="name" placeholder="Your Name">
@@ -51,10 +50,6 @@
                     <input type="date" class="input" id="bookingDate">
                     <p class="validation text-danger"></p>
                 </div>
-                <!-- <div class="input-group">
-                    <input type="time" class="input" id="bookingTime">
-                    <p class="validation text-danger"></p>
-                </div> -->
                 <div class="input-group">
                     <select class="input" id="service">
                         <option value="" disabled selected>Select Service</option>
@@ -62,6 +57,8 @@
                         <option value="grooming">Grooming</option>
                         <option value="feeding">Feeding</option>
                         <option value="training">Training</option>
+                        <option value="pet-treatment">Pet Treatment</option>
+                        <option value="pet-adoption">Pet Adoption</option>
                     </select>
                     <p class="validation text-danger"></p>
                 </div>
@@ -72,30 +69,33 @@
         <div class="services-list">
             <p>Whether you're going on vacation or need daily care, we offer top-notch services for your pets.</p>
             <ul>
-                <li><i class="fas fa-paw"></i> Pet Boarding - A safe and comfortable place for your pets while you're away.</li>
-                <li><i class="fas fa-cut"></i> Grooming - Keep your pets looking their best with our grooming services.</li>
-                <li><i class="fas fa-bone"></i> Feeding - Ensure your pets are well-fed with our tailored feeding services.</li>
-                <li><i class="fas fa-dog"></i> Training - Ensure your pets are well-fed with our tailored feeding services.</li>
-                </ul>
-            </div>
-        </section>
-        <footer>
+                <li><i class="fas fa-paw"></i> PET BOARDING - A safe and comfortable place for your pets while you're away.</li>
+                <li><i class="fas fa-cut"></i> GROOMING - Keep your pets looking their best with our grooming services.</li>
+                <li><i class="fas fa-bone"></i> FEEDING - Ensure your pets are well-fed with our tailored feeding services.</li>
+                <li><i class="fas fa-dog"></i> TRAINING - Teaching your pets the best behaviors.</li>
+                <li><i class="fas fa-stethoscope"></i> PET TREATMENT - Professional care for your pet's health.</li>
+                <li><i class="fas fa-home"></i> PET ADOPTION - Find a new friend and give a pet a loving home.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
         <div class="container-footer">
             <div class="row-footer">
                 <div class="col1-footer">
                     <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Care</h1>
-                    <p class="m-0">Passionate animal lovers dedicated to provide top-notch services for your furry friends. From grooming and training to walking and sitting, we offer a range of personalized solutions to meet your pet's unique needs.</p><br>
-            <p class="m-0 text-white">
-                &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
-            </p>
-        </div>
-        <div class="col2-footer">
-            <div class="row">
-                <div class="col">
-                    <h5 class="text-primary mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>Pattathil Building, Vazhakkala, Kerala</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+91 88765908759</p>
-                    <p><i class="fa fa-envelope mr-2"></i>petcare@gmail.com</p>
+                    <p class="m-0">Passionate animal lovers dedicated to providing top-notch services for your furry friends. From grooming and training to walking and sitting, we offer a range of personalized solutions to meet your pet's unique needs.</p><br>
+                    <p class="m-0 text-white">
+                        &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col2-footer">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-primary mb-4">Get In Touch</h5>
+                            <p><i class="fa fa-map-marker-alt mr-2"></i>Pattathil Building, Vazhakkala, Kerala</p>
+                            <p><i class="fa fa-phone-alt mr-2"></i>+91 88765908759</p>
+                            <p><i class="fa fa-envelope mr-2"></i>petcare@gmail.com</p>
                             <div class="icons">
                                 <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.facebook.com/login"><i class="fab fa-facebook-f"></i></a>
@@ -104,12 +104,9 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-            
         </div>
-        </footer>
-  
-        </body>
-        </html>
+    </footer>
+</body>
+</html>
