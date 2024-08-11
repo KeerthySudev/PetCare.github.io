@@ -1,7 +1,8 @@
 /* General Section Styles */
 section {
     padding: 405px 17px 345px;
-    min-height: calc(100vh - 200px); /* Adjust this value based on the height of your header and footer */
+    min-height: calc(100vh - 200px);
+    /* Adjust this value based on the height of your header and footer */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +20,8 @@ section {
 }
 
 /* Column Styles */
-.col1-abt, .col2-abt {
+.col1-abt,
+.col2-abt {
     flex: 1;
     padding: 20px;
 }
@@ -78,7 +80,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start; /* Adjust alignment */
+    align-items: flex-start;
+    /* Adjust alignment */
 }
 
 /* Image Container Styles */
@@ -106,11 +109,13 @@ section {
     justify-content: space-between;
 }
 
-.img1, .img2 {
+.img1,
+.img2 {
     width: 48%;
 }
 
-.img1 img, .img2 img {
+.img1 img,
+.img2 img {
     width: 100%;
     border-radius: 10px;
 }
@@ -126,7 +131,8 @@ section {
 @media (max-width: 480px) {
     section {
         padding: 151px 8px 10px;
-        min-height: auto; /* Adjust this value based on the height of your header and footer */
+        min-height: auto;
+        /* Adjust this value based on the height of your header and footer */
     }
 
     .row-abt {
@@ -134,7 +140,8 @@ section {
         align-items: center;
     }
 
-    .col1-abt, .col2-abt {
+    .col1-abt,
+    .col2-abt {
         width: 100%;
         padding: 10px;
     }
@@ -154,8 +161,6 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 600px; /* Adjust width */
-        height: 400px; /* Adjust height */
     }
 
     .img {
@@ -163,15 +168,15 @@ section {
         margin-bottom: 10px;
     }
 
-    .img1, .img2 {
+    .img1,
+    .img2 {
         width: 100%;
         margin-bottom: 10px;
     }
 
     .small-images {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
     }
 
     /* Adjusted Font Sizes for Smaller Screens */
