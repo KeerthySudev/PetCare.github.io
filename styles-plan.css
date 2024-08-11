@@ -5,11 +5,13 @@
             background-size: cover;
             background-position: center;
             text-align: center;
+            background-color: azure;
         }
 
         .pricing-section h2 {
             margin-bottom: 30px;
             font-size: 2.5em;
+            color: cadetblue;
         }
 
         .pricing-row {
@@ -70,10 +72,13 @@
             color: #666;
             margin-bottom: 10px;
         }
+        .text-success{
+color: green;
+        }
 
         .btn-signup {
-            background-color: #00ffd0;
-            color: white;
+            background-color: cadetblue;
+            color: black;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
