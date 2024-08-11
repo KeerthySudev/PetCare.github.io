@@ -61,7 +61,7 @@
   function showSuccessMessage() {
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
-    successMessage.innerText = 'Your message has been sent successfully!';
+    successMessage.innerText = 'Your message has been sent! We will reach out to you soon';
     form.insertAdjacentElement('beforebegin', successMessage);
 
     setTimeout(() => {

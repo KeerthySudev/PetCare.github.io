@@ -1,9 +1,9 @@
 section {
-    /* background-image: url('images/cont2.webp'); */
-    background-color:#ccc;
+    background-image: url('images/cont3.webp');
+    /* background-color:#ccc; */
     background-size: cover;
     background-position: center;
-    padding: 377px 9px 308px;
+    padding: 393px 9px 348px;
     min-height: calc(100vh - 200px); 
     display: flex;
     align-items: center;
@@ -27,7 +27,14 @@ section {
 .col-form {
     width: 100%;
 }
-
+.col-form h2{
+FONT-FAMILY: fangsong;
+    color: cadetblue;
+}
+.col-form h1{
+    FONT-FAMILY: fangsong;
+    color: #0056b3;
+    }
 .input-group {
     margin-bottom: 15px;
 }
@@ -42,13 +49,13 @@ section {
 
 .text-danger {
     font-size: 16px;
-    color: rgb(93, 4, 4);
+    color: rgb(203, 92, 92);
     margin-top: 5px;
     min-height: 20px;
 }
 
 .btn-message {
-    background-color: #007bff;
+    background-color: cadetblue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -62,8 +69,8 @@ section {
 }
 
 .success-message {
-    background-color: #67e183;
-    color: white;
+    background-color: cadetblue;
+    color: black;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -96,7 +103,7 @@ padding: 8px;
 @media (max-width: 480px) {
 .row-form {
 padding: 5px;
-max-width: 90%;
+max-width: 100%;
 }
 
 .input {
@@ -113,4 +120,5 @@ padding: 6px 12px;
 font-size: 12px;
 padding: 6px;
 }
+
 }
