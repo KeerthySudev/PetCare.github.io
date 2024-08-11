@@ -111,6 +111,10 @@
     .link {
       font-size: 14px; /* Further reduce link size */
     }
+    
+.link-active{
+  font-size: 16px;
+}
   }
   
   /* header */
@@ -286,3 +290,148 @@
           .learn-btn:hover, .book-btn:hover {
               background-color: #0056b3;
           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page styles */
+
+          .contact-page {
+            background-image: url('images/cont3.webp');
+            /* background-color:#ccc; */
+            background-size: cover;
+            background-position: center;
+            padding: 393px 9px 348px;
+            min-height: calc(100vh - 200px); 
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .row-form {
+            
+            background-color: rgba(255, 255, 255, 0.144); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .image {
+            display: none; /* Hide image section */
+        }
+        
+        .col-form {
+            width: 100%;
+        }
+        .col-form h2{
+        FONT-FAMILY: fangsong;
+            color: cadetblue;
+        }
+        .col-form h1{
+            FONT-FAMILY: fangsong;
+            color: #0056b3;
+            }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .text-danger {
+            font-size: 16px;
+            color: rgb(203, 92, 92);
+            margin-top: 5px;
+            min-height: 20px;
+        }
+        
+        .btn-message {
+            background-color: cadetblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn-message:hover {
+            background-color: #0056b3;
+        }
+        
+        .success-message {
+            background-color: cadetblue;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 768px) {
+        .row-form {
+        padding: 10px;
+        max-width: 90%;
+        }
+        
+        .input {
+        font-size: 14px;
+        padding: 8px;
+        }
+        
+        .btn-message {
+        font-size: 14px;
+        padding: 8px 16px;
+        }
+        
+        .success-message {
+        font-size: 14px;
+        padding: 8px;
+        }
+        }
+        
+        @media (max-width: 480px) {
+        .row-form {
+        padding: 5px;
+        max-width: 100%;
+        }
+        
+        .input {
+        font-size: 12px;
+        padding: 6px;
+        }
+        
+        .btn-message {
+        font-size: 12px;
+        padding: 6px 12px;
+        }
+        
+        .success-message {
+        font-size: 12px;
+        padding: 6px;
+        }
+        
+        }
+
+
+
+        /* About page styles */
+
+       
