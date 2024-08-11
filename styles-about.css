@@ -132,7 +132,6 @@ section {
     section {
         padding: 151px 8px 10px;
         min-height: auto;
-        /* Adjust this value based on the height of your header and footer */
     }
 
     .row-abt {
