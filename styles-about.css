@@ -1,33 +1,37 @@
+/* General Section Styles */
 section {
     padding: 405px 17px 345px;
     min-height: calc(100vh - 200px); /* Adjust this value based on the height of your header and footer */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url("images/gbg.jpg"); */
     background-size: cover;
     background-position: center;
     width: 100%;
     background-color: azure;
 }
 
+/* About Us Row Styles */
 .row-abt {
     display: flex;
     width: 100%;
     max-width: 1200px;
 }
 
+/* Column Styles */
 .col1-abt, .col2-abt {
     flex: 1;
     padding: 20px;
 }
 
+/* First Column: Text Content */
 .col1-abt {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Text Styles */
 .texts-abt {
     max-width: 500px;
 }
@@ -48,10 +52,13 @@ section {
     margin-bottom: 20px;
     color: rgba(22, 20, 20, 0.801);
 }
-.texts-abt i{
+
+.texts-abt i {
     color: cadetblue;
     text-indent: 15px;
 }
+
+/* Button Styles */
 .more-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -66,6 +73,7 @@ section {
     background-color: #0056b3;
 }
 
+/* Second Column: Image Content */
 .col2-abt {
     display: flex;
     flex-wrap: wrap;
@@ -73,12 +81,14 @@ section {
     align-items: flex-start; /* Adjust alignment */
 }
 
+/* Image Container Styles */
 .images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Individual Image Styles */
 .img {
     width: 100%;
     margin-bottom: 20px;
@@ -89,6 +99,7 @@ section {
     border-radius: 10px;
 }
 
+/* Small Images Styles */
 .small-images {
     display: flex;
     width: 100%;
@@ -104,15 +115,17 @@ section {
     border-radius: 10px;
 }
 
+/* Responsive Image */
 .img-fluid {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
+/* Responsive Styles */
 @media (max-width: 480px) {
     section {
-        padding: 120px 8px 10px;
+        padding: 151px 8px 10px;
         min-height: auto; /* Adjust this value based on the height of your header and footer */
     }
 
@@ -141,8 +154,8 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width:600;
-        height:400;
+        width: 600px; /* Adjust width */
+        height: 400px; /* Adjust height */
     }
 
     .img {
@@ -161,6 +174,7 @@ section {
         justify-content: space-between;
     }
 
+    /* Adjusted Font Sizes for Smaller Screens */
     .texts-abt .text-h1 {
         font-size: 1.5rem;
     }
@@ -173,6 +187,7 @@ section {
         font-size: 1rem;
     }
 
+    /* Button Size Adjustments for Smaller Screens */
     .more-btn {
         font-size: 0.875rem;
         padding: 8px 16px;

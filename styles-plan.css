@@ -1,106 +1,120 @@
-      
-        .pricing-section {
-            padding: 160px 20px 40px;
-            /* background-image: url("images/gbg.jpg"); */
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            background-color: azure;
-        }
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 160px 20px 40px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-color: azure;
+}
 
-        .pricing-section h2 {
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            color: cadetblue;
-        }
+/* Section Title */
+.pricing-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: cadetblue;
+}
 
-        .pricing-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+/* Pricing Row Styles */
+.pricing-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        .pricing-card {
-            background-color: rgba(255, 255, 255, 0.144); 
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 20px;
-            width: 30%;
-            max-width: 300px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+/* Pricing Card Styles */
+.pricing-card {
+    background-color: rgba(255, 255, 255, 0.144); 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-            .pricing-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }
+/* Pricing Card Hover Effect */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-        .pricing-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+/* Pricing Card Image */
+.pricing-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-        .pricing-card h3 {
-            font-size: 1.5em;
-            margin: 10px 0;
-            text-align: center;
-        }
+/* Pricing Card Title */
+.pricing-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+}
 
-        .pricing-card .price {
-            font-size: 1.2em;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* Pricing */
+.pricing-card .price {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .pricing-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-        }
+/* Pricing Card List */
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
 
-        .pricing-card ul li {
-            font-size: 1em;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .text-success{
-color: green;
-        }
+/* Pricing Card List Item */
+.pricing-card ul li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
 
-        .btn-signup {
-            background-color: cadetblue;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: center;
-            display: block;
-            margin-top: auto;
-        }
+/* Success Text */
+.text-success {
+    color: green;
+}
 
-        .btn-signup:hover {
-            background-color: #0056b3;
-        }
+/* Signup Button */
+.btn-signup {
+    background-color: cadetblue;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-top: auto;
+}
 
-        @media (max-width: 768px) {
-            .pricing-card {
-                width: 45%;
-            }
-        }
+/* Signup Button Hover Effect */
+.btn-signup:hover {
+    background-color: #0056b3;
+}
 
-        @media (max-width: 480px) {
-            .pricing-card {
-                width: 90%;
-            }
-        }
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 45%;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+    .pricing-card {
+        width: 90%;
+    }
+}

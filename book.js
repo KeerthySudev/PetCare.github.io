@@ -1,83 +1,88 @@
-   
+
 document.addEventListener('DOMContentLoaded', function () {
-const form = document.getElementById('bookingForm');
-const inputs = form.querySelectorAll('.input');
-const validationMessages = form.querySelectorAll('.validation');
+  const form = document.getElementById('bookingForm');
+  const inputs = form.querySelectorAll('.input');
+  const validationMessages = form.querySelectorAll('.validation');
 
-const patterns = {
-name: /^[a-zA-Z\s]+$/,  // Only letters and spaces
-email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,  // Basic email pattern
-bookingDate: /.+/,  // Non-empty
-// bookingTime: /.+/, // Non-empty
-service: /.+/  // Non-empty
-};
-let today = new Date();
+  // Regular expression patterns for validation
+  const patterns = {
+      name: /^[a-zA-Z\s]+$/, 
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 
+      bookingDate: /.+/,
+      service: /.+/  
+  };
 
-    // Format the date to 'YYYY-MM-DD'
-    let formattedDate = today.toISOString().split('T')[0];
+  // Get today's date
+  let today = new Date();
+  let formattedDate = today.toISOString().split('T')[0];
 
-    // Set the min attribute to today's date
-    document.getElementById('bookingDate').setAttribute('min', formattedDate);
+  // Set the minimum date attribute to today's date for the booking date input
+  document.getElementById('bookingDate').setAttribute('min', formattedDate);
 
-inputs.forEach((input, index) => {
-input.addEventListener('focusout', function () {
-  const fieldType = input.id;
-  if (!patterns[fieldType].test(input.value)) {
-    validationMessages[index].innerText = getValidationMessage(fieldType);
-  } else {
-    validationMessages[index].innerText = '';
+  // Add event listeners for each input to validate on focus out
+  inputs.forEach((input, index) => {
+      input.addEventListener('focusout', function () {
+          const fieldType = input.id;
+          if (!patterns[fieldType].test(input.value)) {
+              validationMessages[index].innerText = getValidationMessage(fieldType);
+          } else {
+              validationMessages[index].innerText = '';
+          }
+      });
+  });
+
+  // Form submission event listener
+  form.addEventListener('submit', function (event) {
+      let valid = true;
+
+      // Validate each input field before submitting the form
+      inputs.forEach((input, index) => {
+          const fieldType = input.id;
+          if (!patterns[fieldType].test(input.value)) {
+              validationMessages[index].innerText = getValidationMessage(fieldType);
+              valid = false;
+          } else {
+              validationMessages[index].innerText = '';
+          }
+      });
+
+      // Prevent form submission if validation fails
+      if (!valid) {
+          event.preventDefault();
+      } else {
+          // If validation is successful, show a success message
+          event.preventDefault();
+          showSuccessMessage();
+      }
+  });
+
+  // Function to return validation messages based on the field type
+  function getValidationMessage(type) {
+      switch (type) {
+          case 'name':
+              return 'Please enter a valid name (letters and spaces only).';
+          case 'email':
+              return 'Please enter a valid email address.';
+          case 'bookingDate':
+              return 'Please select a date.';
+          case 'service':
+              return 'Please select a service.';
+          default:
+              return 'This field is required.';
+      }
   }
-});
-});
 
-form.addEventListener('submit', function (event) {
-let valid = true;
+  // Function to display a success message and reset the form
+  function showSuccessMessage() {
+      const successMessage = document.createElement('div');
+      successMessage.className = 'success-message';
+      successMessage.innerText = 'Your booking request has been received! Check your mailbox for more details.';
+      form.insertAdjacentElement('beforebegin', successMessage);
 
-inputs.forEach((input, index) => {
-  const fieldType = input.id;
-  if (!patterns[fieldType].test(input.value)) {
-    validationMessages[index].innerText = getValidationMessage(fieldType);
-    valid = false;
-  } else {
-    validationMessages[index].innerText = '';
+      // Remove the success message after 3 seconds and reset the form
+      setTimeout(() => {
+          successMessage.remove();
+          form.reset();
+      }, 3000);
   }
-});
-
-if (!valid) {
-  event.preventDefault();
-} else {
-  event.preventDefault();
-  showSuccessMessage();
-}
-});
-
-function getValidationMessage(type) {
-switch (type) {
-  case 'name':
-    return 'Please enter a valid name (letters and spaces only).';
-  case 'email':
-    return 'Please enter a valid email address.';
-//   case 'bookingTime':
-//     return 'Please select a time.';
-  case 'bookingDate':
-    return 'Please select a date.';
-  case 'service':
-    return 'Please select a service.';
-  default:
-    return 'This field is required.';
-}
-}
-
-
-function showSuccessMessage() {
-const successMessage = document.createElement('div');
-successMessage.className = 'success-message';
-successMessage.innerText = 'Your message has been sent successfully!';
-form.insertAdjacentElement('beforebegin', successMessage);
-
-setTimeout(() => {
-  successMessage.remove();
-  form.reset();
-}, 3000);
-}
 });

@@ -9,22 +9,24 @@
     <link href="styles.css" rel="stylesheet">
     <link href="img/favicon.ico" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <style>
+        header {
+            position: absolute;
+        }
+    </style>
 </head>
-<style>
-header{
-    position: absolute;
-}
-</style>
 
 <body>
 
+    <!-- Header Section -->
     <header>
         <div class="container-header">
             <nav class="navbar">
+                <!-- Logo -->
                 <a href="" class="logo">
                     <h1 class="second-name"><span class="first-name">Pet</span>Care</h1>
                 </a>
-                <span class="menu-toggle">&#9776;</span>
+                <!-- Navigation Links -->
                 <div class="links">
                     <a href="index.html" class="link-active">Home</a>
                     <a href="services.html" class="link">Services</a>
@@ -37,25 +39,33 @@ header{
             </nav>
         </div>
     </header>
+
+    <!-- Main Content Section -->
     <main>
+        <!-- Background Image -->
         <div class="background-image"></div>
+        <!-- Texts Overlay -->
         <div class="texts">
             <h3 class="text-h1">Best Pet Services</h3>
             <h1 class="text-h2">Pet Spa & Grooming</h1>
             <h5 class="text-h3">Fur-ever friends, fur-ever care!</h5>
+            <!-- Buttons -->
             <div class="btns">
                 <a href="about.html" class="learn-btn">Learn More</a>
                 <a href="booking.html" class="book-btn">Book now</a>
             </div>
-
         </div>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container-footer">
             <div class="row-footer">
+                <!-- Footer Column 1: About -->
                 <div class="col1-footer">
-                    <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Care</h1>
+                    <h1 class="mb-3 display-5 text-capitalize text-white">
+                        <span class="text-primary">Pet</span>Care
+                    </h1>
                     <p class="m-0">Passionate animal lovers dedicated to provide top-notch services for your furry
                         friends. From grooming and training to walking and sitting, we offer a range of personalized
                         solutions to meet your pet's unique needs.</p><br>
@@ -63,6 +73,7 @@ header{
                         &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
                     </p>
                 </div>
+                <!-- Footer Column 2: Contact Info -->
                 <div class="col2-footer">
                     <div class="row">
                         <div class="col">
@@ -70,6 +81,7 @@ header{
                             <p><i class="fa fa-map-marker-alt mr-2"></i>Pattathil Building, Vazhakkala, Kerala</p>
                             <p><i class="fa fa-phone-alt mr-2"></i>+91 88765908759</p>
                             <p><i class="fa fa-envelope mr-2"></i>petcare@gmail.com</p>
+                            <!-- Social Media Icons -->
                             <div class="icons">
                                 <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0"
                                     style="width: 36px; height: 36px;" href="https://x.com/i/flow/login"><i
@@ -86,10 +98,8 @@ header{
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </footer>
 </body>

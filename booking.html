@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetCare - Booking</title>
+
+    <!-- External CSS files -->
     <link href="styles.css" rel="stylesheet">
     <link href="styles-book.css" rel="stylesheet">
+    
+    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    
+    <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- External JavaScript file for booking functionality -->
     <script src="book.js"></script>
-    <style>
-
-    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container-header">
             <nav class="navbar">
+                <!-- Logo -->
                 <a href="" class="logo">
                     <h1 class="second-name"><span class="first-name">Pet</span>Care</h1>
                 </a>
-                <span class="menu-toggle">&#9776;</span>
+                <!-- Navigation links -->
                 <div class="links">
                     <a href="index.html" class="link">Home</a>
                     <a href="services.html" class="link">Services</a>
@@ -34,22 +41,29 @@
         </div>
     </header>
     
+    <!-- Booking Section -->
     <section class="booking-section">
         <div class="booking-form">
+            <!-- Booking Form Title -->
             <h1>BOOK A SERVICE</h1>
+            <!-- Booking Form -->
             <form id="bookingForm">
+                <!-- Name Input -->
                 <div class="input-group">
                     <input type="text" class="input" id="name" placeholder="Your Name">
                     <p class="validation text-danger"></p>
                 </div>
+                <!-- Email Input -->
                 <div class="input-group">
                     <input type="email" class="input" id="email" placeholder="Your E-mail">
                     <p class="validation text-danger"></p>
                 </div>
+                <!-- Booking Date Input -->
                 <div class="input-group">
                     <input type="date" class="input" id="bookingDate">
                     <p class="validation text-danger"></p>
                 </div>
+                <!-- Service Selection Dropdown -->
                 <div class="input-group">
                     <select class="input" id="service">
                         <option value="" disabled selected>Select Service</option>
@@ -62,10 +76,14 @@
                     </select>
                     <p class="validation text-danger"></p>
                 </div>
+                <!-- Submit Button -->
                 <button class="btn-submit" type="submit">Submit</button>
+                <!-- Success Message -->
                 <div class="success-message" style="display: none;">Booking successfully submitted!</div>
             </form>
         </div>
+
+        <!-- Services List -->
         <div class="services-list">
             <p>Whether you're going on vacation or need daily care, we offer top-notch services for your pets.</p>
             <ul>
@@ -79,9 +97,11 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container-footer">
             <div class="row-footer">
+                <!-- Footer Left Column: Logo and Description -->
                 <div class="col1-footer">
                     <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Care</h1>
                     <p class="m-0">Passionate animal lovers dedicated to providing top-notch services for your furry friends. From grooming and training to walking and sitting, we offer a range of personalized solutions to meet your pet's unique needs.</p><br>
@@ -89,6 +109,7 @@
                         &copy; <a class="text-white font-weight-bold" href="#">PetCare</a>. All Rights Reserved.
                     </p>
                 </div>
+                <!-- Footer Right Column: Contact Information and Social Media Icons -->
                 <div class="col2-footer">
                     <div class="row">
                         <div class="col">
@@ -96,6 +117,7 @@
                             <p><i class="fa fa-map-marker-alt mr-2"></i>Pattathil Building, Vazhakkala, Kerala</p>
                             <p><i class="fa fa-phone-alt mr-2"></i>+91 88765908759</p>
                             <p><i class="fa fa-envelope mr-2"></i>petcare@gmail.com</p>
+                            <!-- Social Media Icons -->
                             <div class="icons">
                                 <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="https://www.facebook.com/login"><i class="fab fa-facebook-f"></i></a>
