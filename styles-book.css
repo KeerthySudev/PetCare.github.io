@@ -127,6 +127,8 @@
 
             .booking-form, .services-list {
                 flex: 1 1 100%;
-                margin-right: 0;
+                max-width: none;
+        margin: 10px;
             }
         }
+        
